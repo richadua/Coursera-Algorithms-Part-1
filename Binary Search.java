@@ -24,7 +24,7 @@ class BinarySearch {
         int low = 0;
         int high = inputArray.length - 1;
         while (low<=high) {
-            int mid = (low + high)/2;
+            int mid = low + (high-low)/2;
             if(key<inputArray[mid])
                 high = mid - 1;
             else if(key>inputArray[mid])
