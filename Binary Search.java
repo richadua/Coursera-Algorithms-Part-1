@@ -4,7 +4,7 @@ class BinarySearch {
     public static void main(String[] args) {
         int[] inputArray = new int[7];
         int key = 6, index = 0;
-        for(int i=0; i<args.length;i++) {
+        for(int i = 0; i < args.length ; i++) {
             inputArray[i] = Integer.parseInt(args[i]);
 //            if(i == args.length - 1) {
 //                key = Integer.parseInt(args[i]);
@@ -23,11 +23,11 @@ class BinarySearch {
     public static int searchElement(int key, int[] inputArray) {
         int low = 0;
         int high = inputArray.length - 1;
-        while (low<=high) {
+        while (low <= high) {
             int mid = low + (high-low)/2;
-            if(key<inputArray[mid])
+            if(key < inputArray[mid])
                 high = mid - 1;
-            else if(key>inputArray[mid])
+            else if(key > inputArray[mid])
                 low = mid + 1;
             else
                 return mid;
